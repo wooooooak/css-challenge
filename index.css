@@ -1,3 +1,8 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700, 300);
+
+// use only the available space inside the 400x400 frame
 .frame {
   position: absolute;
   top: 50%;
@@ -41,10 +46,12 @@
   font-size: 1.5em;
   font-weight: bold;
   line-height: 20px;
+  cursor: pointer;
 }
 
 @keyframes buttonHover {
   from {
+    // background: #57bf95;
   }
   to {
     background: #57b295;
@@ -54,7 +61,31 @@
   animation: buttonHover 0.3s linear forwards;
 }
 
+@keyframes clickButton {
+  0% {
+  }
+  15% {
+    width: 50px;
+    color: transparent;
+    border: 2px solid grey;
+  }
+  30% {
+    box-shadow: 60px -60px 0 2px #57d895, -60px -60px 0 2px #57d895,
+      -60px 60px 0 2px #57d895, 60px 60px 0 2px #57d895, 0 0 0 2px #fff;
+  }
+
+  45% {
+  }
+
+  60% {
+  }
+  100% {
+    width: 50px;
+    color: transparent;
+    border: 2px solid grey;
+  }
+}
+
 #btnControl:checked + label {
-  background: blue;
-  color: white;
+  animation: clickButton 2s linear forwards;
 }
